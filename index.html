@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- This templete is borrowed from Pix2Map  -->
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="icon" href="assets/favicon.ico">
+
+    <style type="text/css">
+        @import url('https://fonts.cdnfonts.com/css/roboto');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            letter-spacing: 0.1px;
+            font-size: 18px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1100px;
+        }
+
+        video.header-vid {
+            height: 140px;
+            border: 1px solid black;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+        }
+
+        a:link,
+        a:visited {
+            color: #1367a7;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #208799;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        }
+
+        .title {
+            margin-top: 50px;
+            font-size: 40px;
+            font-weight: bold;
+            color: #182B49;
+        }
+
+        .authors {
+            margin-top: 30px;
+        }
+
+        .institutions {
+            margin-top: 5px;
+        }
+
+        .entities_list td {
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 20px;
+        }
+
+        .logos {
+            width: 900px;
+            margin-top: 10px;
+        }
+
+        .logos td {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .links {
+            margin-top: 20px;
+            font-size: 22px;
+            width: 900px;
+        }
+
+        .qualitative_teaser {
+            margin-top: 10px;
+            margin-bottom: 25px;
+            width: 1100px;
+        }
+
+        .video,
+        .results,
+        .footer {
+            margin-top: 30px;
+            margin-bottom: 35px;
+        }
+
+        .abstract-title,
+        .framework-overview-title,
+        .our-approach-title,
+        .results-title,
+        .video-title {
+            margin-top: 30px;
+            font-size: 32px;
+            color: #182B49;
+            width: 700px;
+        }
+
+        .hlight {
+            font-weight: bold;
+            color: #182B49;
+            display: inline-block;
+            font-size: 18px;
+        }
+
+        .text {
+            font-weight: 300 !important;
+        }
+
+        .abstract {
+            margin-top: 25px;
+            margin-bottom: 35px;
+            text-align: justify;
+            width: 900px;
+            font-size: 18px;
+            line-height: 23px;
+            font-weight: 100 !important;
+        }
+
+        .framework-teaser-img,
+        .our-approach-img {
+            margin-top: 30px;
+            width: 850px;
+        }
+
+        .framework-overview-note,
+        .our-approach-note {
+            margin-top: 20px;
+            margin-bottom: 35px;
+            text-align: justify;
+            width: 900px;
+            font-size: 18px;
+            line-height: 23px;
+        }
+
+        .results-content {
+            margin-top: 30px;
+            display: block;
+        }
+
+        .results-note {
+            width: 400px;
+            display: inline-block;
+            text-align: justify;
+            vertical-align: top;
+            font-size: 18px;
+            line-height: 23px;
+        }
+
+        .results-img {
+            width: 480px;
+            display: inline-block;
+            padding-left: 20px;
+        }
+
+        .video-content {
+            margin-top: 30px;
+        }
+
+        .footer {
+            margin-bottom: 100px;
+        }
+
+        .paperpreview-img {
+            width: 300px;
+        }
+
+        .footer-content {
+            width: 1100px;
+            line-height: 23px;
+        }
+
+        .footer-text {
+            width: 780px;
+            padding-left: 20px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+    </style>
+    <title>MOST: Lidar Panoptic Segmentation and Tracking without Bells and Whistles</title>
+    <meta property="og:title" content="Lidar Panoptic Segmentation and Tracking without Bells and Whistles">
+    <meta property="og:description" content="Agarwalla et al, Lidar Panoptic Segmentation and Tracking without Bells and Whistles. In IROS, 2023.">
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.974.0">
+
+    <center class="title">
+        Lidar Panoptic Segmentation and Tracking without Bells and Whistles
+    </center>
+
+    <table align="center" class="entities_list authors">
+        <tbody>
+            <tr>
+                <td align="center">
+                    <span>
+                        <a href="https://abhinavagarwalla.github.io/" target="_blank">Abhinav Agarwalla</a>
+                        <sup>1,2</sup>
+                    </span>
+                </td>
+                <td align="center">
+                    <span>
+                        <a href="https://xuhuaking.github.io/" target="_blank">Xuhua Huang</a>
+                        <sup>1,3</sup>
+                    </span>
+                </td>
+                <td align="center">
+                    <span>
+                        <a href="https://www.linkedin.com/in/jasonziglar/" target="_blank">Jason Ziglar</a>
+                        <sup>2</sup>
+                    </span>
+                </td>
+                <td align="center">
+                    <span>
+                        <a href="https://www.francescoferroni.com/" target="_blank">Francesco Ferroni</a>
+                        <sup>2</sup>
+                    </span>
+                </td>
+                <td align="center">
+                    <span>
+                        <a href="https://dvl.in.tum.de/team/lealtaixe/" target="_blank">Laura Leal-Taixé</a>
+                        <sup>4</sup>
+                    </span>
+                </td>
+                <td align="center">
+                    <span>
+                        <a href="https://faculty.cc.gatech.edu/~hays/" target="_blank">James Hays</a>
+                        <sup>5</sup>
+                    </span>
+                </td>
+                <td align="center">
+                    <span>
+                        <a href="https://aljosaosep.github.io/"  target="_blank">Aljoša Ošep </a>
+                        <sup>1</sup>
+                    </span>
+                </td>
+                <td align="center">
+                    <span>
+                        <a href="https://www.cs.cmu.edu/~deva/" target="_blank">Deva Ramanan</a>
+                        <sup>1, 2</sup>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table align="center" class="entities_list institutions">
+        <tbody>
+            <tr>
+                <td>
+                    <center><span>Carnegie Mellon University<sup> 1</sup></span></center>
+                </td>
+                <td>
+                    <center><span>ArgoAI<sup> 2</sup></span></center>
+                </td>
+                <td>
+                    <center><span>Meta AI<sup> 3</sup></span></center>
+                </td>
+                <td>
+                    <center><span>TU Munich<sup> 4</sup></span></center>
+                </td>
+                <td>
+                    <center><span>Georgia Tech<sup> 5</sup></span></center>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table align="center" width="400px" style="margin-top: 10px">
+        <tbody>
+            <tr>
+                <td align="center" width="150px">
+                    <center>
+                        <span style="font-size:14px">* work done while at CMU and Argo, now at Neural Magic</span>
+                    </center>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table align="center" class="logos">
+        <tbody>
+            <tr>
+                <td align="center">
+                    <a href="https://ieee-iros.org/" target="_blank">
+                        <img alt="IROS 2023" src="./logos/iros.svg" width="200">
+                    </a>
+                </td>
+                <td align="center">
+                    <a href="https://www.cmu.edu/" target="_blank">
+                        <img alt="CMU" src="./logos/cmu.png" width="130">
+                    </a>
+                </td>
+                <td align="center">
+                    <a href="" target="_blank">
+                        <img alt="Argo" src="./logos/argo.png" width="130">
+                    </a>
+                </td>
+                <td align="center">
+                    <a href="" target="_blank">
+                        <img alt="Meta" src="./logos/meta.png" width="130">
+                    </a>
+                </td>
+                <td align="center">
+                    <a href="" target="_blank">
+                        <img alt="TUM" src="./logos/tum.png" width="130">
+                    </a>
+                </td>
+                <td align="center">
+                    <a href="" target="_blank">
+                        <img alt="Georgia Tech" src="./logos/gatech.png" width="130">
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table align="center" class="links">
+        <tr>
+            <td align="center">
+                <a href="https://ieee-iros.org/">🌐 IROS 2023</a>
+            </td>
+            <td align="center">
+                <a href="https://arxiv.org/">📄 Paper</a>
+            </td>
+            <td align="center">
+                <a href="Coming Soon">🖼️ Poster</a>
+            </td>            
+            <td align="center">
+                <a href="Coming Soon">📽 Video</a>
+            </td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <center>
+        <img src="./figures/teaser.png" class="teaser" style="width:60%;">
+    </center>
+
+    <hr>
+
+    <center>
+        <center class="abstract-title">
+            Abstract
+        </center>
+        <div class="abstract">
+            <span class="text">
+                State-of-the-art lidar panoptic segmentation (LPS) methods follow ``bottom-up" segmentation-centric fashion wherein they build upon semantic segmentation networks by utilizing clustering to obtain object instances. In this paper, we re-think this approach and propose a surprisingly simple yet effective detection-centric network for both LPS and tracking. Our network is modular by design and optimized for all aspects of both the panoptic segmentation and tracking task.
+                One of the core components of our network is the object instance detection branch, which we train using point-level (modal) annotations, as available in segmentation-centric datasets. 
+                In the absence of amodal (cuboid) annotations, we regress modal centroids and object extent using trajectory-level supervision that provides information about object size, which cannot be inferred from single scans due to occlusions and the sparse nature of the lidar data. We obtain fine-grained instance segments by learning to associate lidar points with detected centroids. We evaluate our method on several 3D/4D LPS benchmarks and observe that our model establishes a new state-of-the-art among open-sourced models, outperforming recent query-based models.
+             </span>
+        </div>
+    </center>
+
+    <hr>
+
+    <!-- <center class="framework-overview">
+        <div class="framework-overview-title">Task overview</div>
+        <img src="./figures/2.png" class="framework-teaser-img">
+        <div class="framework-overview-note" class="text">
+          <div>
+            Problem: Text.
+          </div>
+          <div>
+            Challenges: text.
+          </div>
+          <div>
+            Prior works: text
+
+        </div>
+    </center> -->
+
+    <hr>
+
+    <!-- <center class="our-approach">
+        <div class="our-approach-title">Our approach: </div>
+          
+          Text
+        <img src="./figures/*.png" class="our-approach-img">
+        <div class="our-approach-note" class="text">
+            <div>
+              <p>
+                More text.
+              </p>
+            </div>
+        </div>
+    </center> -->
+
+    <hr>
+
+    <!-- <center class=" results">
+        <div class="results-title">Results</div>
+        <div class="results-content">
+            <div class="results-note" class="text">
+                <div>
+                To be added
+                </div>
+              
+            </div>
+            <img src="./figures/4.png" class="results-img">
+        </div>
+    </center> -->
+
+    <hr>
+
+    <!-- <center class="video">
+        <div class="video-title">Video presentation</div>
+        <div class="video-content">
+            <iframe width="854px" height="480px" src="https://www.youtube.com/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </center> -->
+
+    <hr>
+
+    <center class="footer">
+        <div class="footer-content">
+            <table align="center">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img class="paperpreview-img" src="./figures/teaser.png">
+                        </td>
+                        <td></td>
+                        <td class="footer-text text">
+                                <div>Abhinav Agarwalla, Xuhua Huang, Jason Ziglar, Francesco Ferroni, Laura Leal-Taixé, James Hays, Aljoša Ošep, Deva Ramanan</div>
+                                <a href="https://mostlps.github.io/">Lidar Panoptic Segmentation and Tracking without Bells and Whistles</a>
+                                <div><i>IROS 2023</i></div>
+                                <a href="https://arxiv.org">📄 Paper</a>
+                                <a href="Coming Soon">📽 Video</a>
+                                <a href="Coming Soon">🖼️ Poster</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </center>
+</body>
+
+</html>
